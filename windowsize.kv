@@ -1,0 +1,80 @@
+# Test a number of ways to size the kivy window
+
+#: import Config kivy.config
+SizeIt:
+    orientation:'vertical'
+    BoxLayout:
+        Button:
+            text: 'Config.set w, h'
+            on_release: root.config_set(w_input1.text,h_input1.text)
+        BoxLayout:
+            orientation:'vertical'
+            TextInput:
+                id:w_input1
+                hint_text: 'width'
+                multiline: False
+            TextInput:
+                id:h_input1
+                hint_text: 'height'
+                multiline: False
+
+    BoxLayout:
+        Button:
+            text: 'Window.size = (w,h)'
+            on_release: root.wsize(w_input2.text,h_input2.text)
+        BoxLayout:
+            orientation:'vertical'
+            TextInput:
+                id:w_input2
+                hint_text: 'width'
+                multiline: False
+            TextInput:
+                id:h_input2
+                hint_text: 'height'
+                multiline: False
+
+    BoxLayout:
+        Button:
+            text: 'Config.set dp(w), dp(h)'
+            on_release: root.config_set_dp(w_input3.text,h_input3.text)
+        BoxLayout:
+            orientation:'vertical'
+            TextInput:
+                id:w_input3
+                hint_text: 'width'
+                multiline: False
+            TextInput:
+                id:h_input3
+                hint_text: 'height'
+                multiline: False
+
+    BoxLayout:
+        Button:
+            text: 'Window.size = (dp(w), dp(h))'
+            on_release: root.wsize_dp(w_input4.text,h_input4.text)
+        BoxLayout:
+            orientation:'vertical'
+            TextInput:
+                id:w_input4
+                hint_text: 'width'
+                multiline: False
+            TextInput:
+                id:h_input4
+                hint_text: 'height'
+                multiline: False
+
+
+
+
+
+#BoxLayout:
+#    orientation: 'vertical'
+#    SizeInput:
+#        name: 'Config.set w, h'
+#
+#    SizeInput:
+#        name: 'Window.size = (w,h)'
+#    SizeInput:
+#        name: 'Config.set dp(w), dp(h)'
+#    SizeInput:
+#        name: 'Window.size = (dp(w), dp(h))'
