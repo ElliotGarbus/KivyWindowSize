@@ -10,8 +10,6 @@ from kivy.metrics import dp
 from kivy.core.window import Window
 
 
-
-
 class SizeIt(BoxLayout):
     def config_set(self, w, h):
         print(f'Using Config.set with width:{w} and height:{h}')
