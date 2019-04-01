@@ -2,7 +2,9 @@
 from kivy.config import Config
 print('Setting Config values prior to start')
 Config.set('graphics', 'width', 800)
-Config.set('graphics', 'height', 800)
+Config.set('graphics', 'height', 400)
+
+# Config.set must be run prior to the app starting, or will have no effect
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
