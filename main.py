@@ -8,11 +8,17 @@ Config.set('graphics', 'height', 400)
 
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
+from kivy.properties import ObjectProperty, StringProperty
 from kivy.metrics import dp
 from kivy.core.window import Window
 
 
+class SizeInput(BoxLayout):
+    name = StringProperty()
+    action = ObjectProperty()
+
 class SizeIt(BoxLayout):
+
     def config_set(self, w, h):
         print(f'Using Config.set with width:{w} and height:{h}')
         Config.set('graphics', 'width', int(w))
