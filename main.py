@@ -54,8 +54,8 @@ class WindowSizeApp(App):
         config = self.config
         config.set('Window', 'width', Window.size[0])
         config.set('Window', 'height', Window.size[1])
-        config.set('Window', 'top', self.win_top)
-        config.set('Window', 'left', self.win_left)
+        config.set('Window', 'top', Window.top)
+        config.set('Window', 'left', Window.left)
         print(f'close: Window.size: {Window.size}')
         print(f'close: Window.top: {Window.top}, Window.left: {Window.left}')
         return False
