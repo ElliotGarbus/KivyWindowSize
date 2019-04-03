@@ -3,7 +3,8 @@ Method for saving and restoring the window size on Linux, Windows and Mac
 
 The App class provides the on_stop event.  This is described as:
 
-    Event handler for the on_stop event which is fired when the application has finished running (i.e. the window is about to be closed).
+    Event handler for the on_stop event which is fired when the application has 
+    finished running (i.e. the window is about to be closed).
 
 On MSFT Windows, the values of Window.top and Window.left are NOT valid when the App.on_stop() event happens, but the size is valid.
 
