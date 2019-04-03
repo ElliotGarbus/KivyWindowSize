@@ -1,7 +1,7 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
 from kivy.config import Config
 print('Setting Config values prior to start')
-Config.set('graphics', 'width', 400)
+Config.set('graphics', 'width', 400) # Todo: Is there a way to load these values from the .ini file?
 Config.set('graphics', 'height', 400)
 
 # Config.set must be run prior to the app starting, or will have no effect
