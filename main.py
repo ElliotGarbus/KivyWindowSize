@@ -17,6 +17,7 @@ class SizeInput(BoxLayout):
     name = StringProperty()
     action = ObjectProperty()
 
+
 class SizeIt(BoxLayout):
 
     def wsize(self, w, h):
@@ -49,7 +50,7 @@ class WindowSizeApp(App):
         print(f'resize: Window.top: {Window.top}, Window.left: {Window.left}')
 
     def window_close(self, win):
-        print('Window was closed')
+        print('Window close requested')
         config = self.config
         config.set('Window', 'width', Window.size[0])
         config.set('Window', 'height', Window.size[1])
@@ -57,8 +58,10 @@ class WindowSizeApp(App):
         config.set('Window', 'left', self.win_left)
         print(f'close: Window.size: {Window.size}')
         print(f'close: Window.top: {Window.top}, Window.left: {Window.left}')
+        return False
 
     def window_event(self, win):
+        # on_draw is called when ever the window is redrawn, display size and pos
         self.win_width, self.win_height = Window.size
         self.win_top = Window.top
         self.win_left = Window.left
