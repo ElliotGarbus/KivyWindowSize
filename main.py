@@ -49,7 +49,7 @@ class WindowSizeApp(App):
         print(f'resize: Window.size: {Window.size}')
         print(f'resize: Window.top: {Window.top}, Window.left: {Window.left}')
 
-    def window_close(self, win):
+    def window_request_close(self, win):
         print('Window close requested')
         config = self.config
         config.set('Window', 'width', Window.size[0])
@@ -70,7 +70,7 @@ class WindowSizeApp(App):
         self.title = 'Window Size and Position Test'
         Window.minimum_height = 160
         Window.minimum_width = 300
-        Window.bind(on_request_close=self.window_close)
+        Window.bind(on_request_close=self.window_request_close)
         Window.bind(on_draw=self.window_event)
 
     def on_start(self):
