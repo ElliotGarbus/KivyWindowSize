@@ -70,9 +70,8 @@ class WindowSizeApp(App):
     def on_start(self):
         # Set Window to previous size and position
         config = self.config
-        height = config.getdefault('Window', 'height', 160)
         width = config.getdefault('Window', 'width', 300)
-
+        height = config.getdefault('Window', 'height', 200)
         Window.size = (int(width), int(height))
         Window.top = int(config.getdefault('Window', 'top', 40))
         Window.left = int(config.getdefault('Window', 'left', 40))
