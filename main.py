@@ -79,7 +79,7 @@ class WindowSizeApp(App):
         print(f'on_start(): Window.top: {Window.top}, Window.left: {Window.left}')
 
     def on_stop(self):
-        # Save Current Window Size and Postion
+        # Save Current Window Size and Position
         config = self.config
         # Window position NOT valid in on_stop
         print(f'on_stop(): Window.size: {Window.size}')
