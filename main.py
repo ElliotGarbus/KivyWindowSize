@@ -29,7 +29,7 @@ class SizeIt(BoxLayout):
 
 class WindowSizeApp(App):
     win_top = NumericProperty()
-    win_left= NumericProperty()
+    win_left = NumericProperty()
     win_width = NumericProperty()
     win_height = NumericProperty()
 
@@ -80,7 +80,6 @@ class WindowSizeApp(App):
 
         print(f'on_start(): Window.size: {Window.size}')
         print(f'on_start(): Window.top: {Window.top}, Window.left: {Window.left}')
-
 
     def on_stop(self):
         # Save Current Window Size and Postion
