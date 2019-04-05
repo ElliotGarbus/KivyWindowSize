@@ -5,7 +5,7 @@ from kivy.config import Config
 parser = ConfigParser()
 found = parser.read('windowsize.ini')  # created in main.py,
 if found:
-    # print('Setting size and postion')
+    # print('Setting size and position')
     Config.set('graphics', 'width', parser['Window']['width'])
     Config.set('graphics', 'height', parser['Window']['height'])
     Config.set('graphics', 'top', parser['Window']['top'])
