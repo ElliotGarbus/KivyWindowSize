@@ -1,7 +1,7 @@
 from configparser import ConfigParser
 from kivy.config import Config
 
-# Use Python lib config parser to read .ini file prior to app startup
+# Use Python lib configparser to read .ini file prior to app startup
 parser = ConfigParser()
 found = parser.read('windowsize.ini')  # created in main.py: build_config()
 if found:
