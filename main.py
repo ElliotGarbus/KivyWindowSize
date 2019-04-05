@@ -1,11 +1,7 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
-from kivy.config import Config
-print('Setting Config values prior to start')
-Config.set('graphics', 'width', 400) # Todo: Is there a way to load these values from the .ini file?
-Config.set('graphics', 'height', 400)
 
 # Config.set must be run prior to the app starting, or will have no effect
-
+import startupconfig
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
@@ -38,8 +34,7 @@ class WindowSizeApp(App):
     win_height = NumericProperty()
 
     def build_config(self, config):
-        config.setdefaults('Window', {'width': 400, 'height': 400})
-        config.setdefaults('Window', {'top': 40, 'left': 40})
+        config.setdefaults('Window', {'width': 300, 'height': 200, 'top': 40, 'left': 40})
 
     def window_resize(self, win, w, h):
         print('Window was resized')
