@@ -14,7 +14,6 @@ class SizeInput(BoxLayout):
 
 
 class SizeIt(BoxLayout):
-
     def wsize(self, w, h):
         print(f'Using Window.size with width:{w} and height:{h}')
         Window.size = (int(w), int(h))
