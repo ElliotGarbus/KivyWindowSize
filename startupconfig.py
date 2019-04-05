@@ -8,5 +8,6 @@ if found:
     # print('Setting size and position')
     Config.set('graphics', 'width', parser['Window']['width'])
     Config.set('graphics', 'height', parser['Window']['height'])
-    Config.set('graphics', 'top', parser['Window']['top'])
+    Config.set('graphics', 'position', 'custom')
+    Config.set('graphics', 'top', parser['Window']['top']) # find top and left
     Config.set('graphics', 'left', parser['Window']['left'])
