@@ -3,7 +3,7 @@ from kivy.config import Config
 
 # print('Setting Config values prior to start')
 parser = ConfigParser()
-found = parser.read('windowsize.ini')  # created in main.py,
+found = parser.read('windowsize.ini')  # created in main.py, build_config()
 if found:
     # print('Setting size and position')
     Config.set('graphics', 'width', parser['Window']['width'])

@@ -1,7 +1,6 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
 
-# Config.set must be run prior to the app starting, or will have no effect
-import startupconfig
+import startupconfig  # runs Config.set prior to loading kivy.app
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
