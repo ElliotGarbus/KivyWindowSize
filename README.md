@@ -15,7 +15,7 @@ The Kivy Window class instance has an event called, on_request_close(), this is 
     If the the event is triggered because of the keyboard escape key, the keyword argument source is dispatched 
     along with a value of keyboard to the bound functions.
 
-Under Windows, the size and position values are valid here.  I am capturing the size and position data at this event and
+The size and position values are valid here.  I am capturing the size and position data at this event and
 writing them into the config file at App.on_stop().
 
 
