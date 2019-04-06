@@ -43,6 +43,7 @@ class WindowSizeApp(App):
         print(f'resize: Window.top: {Window.top}, Window.left: {Window.left}')
 
     def window_request_close(self, win):
+        # Window.size is automatically adjusted for density, must divide by density when saving size
         print('Window close requested')
         config = self.config
         config.set('Window', 'width', int(Window.size[0]/Metrics.density))

@@ -16,3 +16,4 @@ else:
     Config.set('graphics', 'position', 'custom')
     Config.set('graphics', 'top', 40)
     Config.set('graphics', 'left', 40)
+Config.set('kivy', 'exit_on_escape',0)
