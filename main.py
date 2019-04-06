@@ -4,7 +4,7 @@ import startupconfig  # runs Config.set prior to loading kivy.app
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
-from kivy.metrics import dp
+from kivy.metrics import dp, Metrics
 from kivy.core.window import Window
 
 
@@ -45,8 +45,8 @@ class WindowSizeApp(App):
     def window_request_close(self, win):
         print('Window close requested')
         config = self.config
-        config.set('Window', 'width', Window.size[0])
-        config.set('Window', 'height', Window.size[1])
+        config.set('Window', 'width', int(Window.size[0]/Metrics.density))
+        config.set('Window', 'height', int(Window.size[1]/Metrics.density))
         config.set('Window', 'top', Window.top)
         config.set('Window', 'left', Window.left)
         print(f'close: Window.size: {Window.size}')
@@ -77,6 +77,7 @@ class WindowSizeApp(App):
 
         print(f'on_start(): Window.size: {Window.size}')
         print(f'on_start(): Window.top: {Window.top}, Window.left: {Window.left}')
+        print(f'on_start():density: {Metrics.density}  dpi: {Metrics.dpi} fontscale: {Metrics.fontscale}')
 
     def on_stop(self):
         # Save Current Window Size and Position
