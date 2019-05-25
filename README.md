@@ -1,5 +1,5 @@
 # KivyWindowSize
-Method for using the config facility for saving and restoring the window size and postion on Linux, Windows and Mac.  The application will open initially at a default position.  After closing the app the window position and size will be saved.  The next time the application is started it will be in the previous size and location.
+Method for using the config facility for saving and restoring the window size and position on Linux, Windows and Mac.  The application will open initially at a default position.  After closing the app the window position and size will be saved.  The next time the application is started it will be in the previous size and location.
 
 The App class provides the on_stop event.  This is described as:
 
