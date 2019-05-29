@@ -29,7 +29,7 @@ exe = EXE(pyz,
           strip=False,
           upx=False,
           console=False )
-coll = COLLECT(exe, Tree('../', excludes=['.git', 'screenshots', 'KivyWindowSizeDist','__pycache__','.idea','*.bat']),
+coll = COLLECT(exe, Tree('../', excludes=['.git', 'screenshots', 'KivyWindowSizeDist','__pycache__','.idea']),
                Tree('/Library/Frameworks/SDL2_ttf.framework/Versions/A/Frameworks/FreeType.framework'),
                a.binaries,
                a.zipfiles,
