@@ -64,6 +64,7 @@ class WindowSizeApp(App):
         self.title = 'Window Size and Position Test'
         Window.minimum_height = 160
         Window.minimum_width = 260
+        self.config.read('WindowSize.ini')
         Window.bind(on_request_close=self.window_request_close)
         Window.bind(on_draw=self.window_event)
 
