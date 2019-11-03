@@ -1,11 +1,11 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
 
-import startupconfig  # runs Config.set prior to loading kivy.app
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
 from kivy.metrics import dp, Metrics
 from kivy.core.window import Window
+from kivy.config import Config
 
 
 class SizeInput(BoxLayout):
@@ -60,11 +60,16 @@ class WindowSizeApp(App):
         self.win_top = Window.top
         self.win_left = Window.left
 
+    def open_settings(self, *largs):
+        pass
+
     def build(self):
         self.title = 'Window Size and Position Test'
         Window.minimum_height = 160
         Window.minimum_width = 260
         self.config.read('WindowSize.ini')
+        Config.set('kivy', 'exit_on_escape', 0)
+
         Window.bind(on_request_close=self.window_request_close)
         Window.bind(on_draw=self.window_event)
 
