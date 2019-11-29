@@ -72,6 +72,7 @@ class WindowSizeApp(App):
 
         Window.bind(on_request_close=self.window_request_close)
         Window.bind(on_draw=self.window_event)
+        Window.bind(on_resize=self.window_resize)
 
     def on_start(self):
         # Set Window to previous size and position
