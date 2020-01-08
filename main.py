@@ -1,6 +1,6 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
 
-import startupconfig  # runs Config.set prior to loading kivy.app
+from startupconfig import window_height, window_width, window_left, window_top
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
@@ -32,7 +32,8 @@ class WindowSizeApp(App):
     win_height = NumericProperty()
 
     def build_config(self, config):
-        config.setdefaults('Window', {'width': 300, 'height': 200, 'top': 40, 'left': 40})
+        config.setdefaults('Window', {'width': window_width, 'height': window_height,
+                                      'top': window_top, 'left': window_left})
 
     def window_resize(self, win, w, h):
         print('Window was resized')
