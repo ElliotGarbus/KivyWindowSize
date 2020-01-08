@@ -61,7 +61,7 @@ class WindowSizeApp(App):
         self.win_top = Window.top
         self.win_left = Window.left
 
-    def open_settings(self, *largs):
+    def open_settings(self, *args):  # Turn off kivy control panel
         pass
 
     def build(self):
