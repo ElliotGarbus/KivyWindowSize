@@ -61,12 +61,16 @@ class WindowSizeApp(App):
         self.win_top = Window.top
         self.win_left = Window.left
 
+    def open_settings(self, *largs):
+        pass
+
     def build(self):
         self.title = 'Window Size and Position Test'
         Window.minimum_height = 160
         Window.minimum_width = 260
         Window.bind(on_request_close=self.window_request_close)
         Window.bind(on_draw=self.window_event)
+        Window.bind(on_resize=self.window_resize)
 
     def on_start(self):
         # Set Window to previous size and position
