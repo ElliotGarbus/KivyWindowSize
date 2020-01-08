@@ -59,6 +59,7 @@ class WindowSizeApp(App):
         return False
 
     def window_event(self, win):
+        print('on_draw event')
         # on_draw is called when ever the window is redrawn, display size and pos
         self.win_width, self.win_height = Window.size
         self.win_top = Window.top
