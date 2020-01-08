@@ -39,7 +39,7 @@ class WindowSizeApp(App):
                                       'top': window_top, 'left': window_left})
 
     def window_resize(self, win, w, h):
-        print('Window was resized')
+        print(f'Window was resized: win: {win}, w: {w}, h:{h}')
         self.win_width, self.win_height = Window.size
         self.win_top = Window.top
         self.win_left = Window.left
