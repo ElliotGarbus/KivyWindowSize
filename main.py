@@ -1,6 +1,7 @@
 """ A test for how Windows are sized to evaluate Windows, Mac and Linux"""
-
+# The startupconfig import must be at the top of the file
 from startupconfig import window_height, window_width, window_left, window_top
+
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import ObjectProperty, StringProperty, NumericProperty
@@ -14,11 +15,13 @@ class SizeInput(BoxLayout):
 
 
 class SizeIt(BoxLayout):
-    def wsize(self, w, h):
+    @staticmethod
+    def wsize(w, h):
         print(f'Using Window.size with width:{w} and height:{h}')
         Window.size = (int(w), int(h))
 
-    def wsize_dp(self, w, h):
+    @staticmethod
+    def wsize_dp(w, h):
         dpw = int(dp(w))
         dph = int(dp(h))
         print(f'Using Window.size dp with dp(width):{dpw} and dp(height):{dph}')
